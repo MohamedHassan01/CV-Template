@@ -1,0 +1,59 @@
+.header {
+  position: relative;
+  .navbar-brand {
+    color: #fff;
+    font-size: 38px;
+    padding-top: 15px;
+    @include prefixer(transition, all .5s ease-in-out, webkit moz o);
+    &:hover {
+      color: $blueColor;
+    }
+  }
+  .navbar-default {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding-top: 20px;
+    @include prefixer(transition, all .7s ease-in-out, webkit moz o);
+    .nav {
+      li {
+        a {
+          margin: 10px 15px;
+          padding: 0 0 5px 0;
+          color: #fff;
+          font-size: 17px;
+          @include prefixer(transition, all .3s ease-in-out, webkit moz o);
+          &:hover {
+            color: $blueColor;
+            background-color: transparent;
+          }
+        }
+        &.active a,
+        .active>a:focus,
+        .active>a:hover {
+          color: #fff;
+          background-color: transparent;
+        }
+      }
+    }
+
+  }
+  .navbar-dark {
+    background-color: $grayColor;
+    padding-bottom: 10px;
+    .nav {
+      li {
+        &.active a,
+        .active>a:focus,
+        .active>a:hover {
+          color: $blueColor;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

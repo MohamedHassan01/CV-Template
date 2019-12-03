@@ -1,0 +1,16 @@
+.mainButton {
+  width: 150px;
+  height: 41px;
+  background-color: $blueColor;
+  border: 1px solid $blueColor;
+  color: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  letter-spacing: 0.1em;
+  @include prefixer(transition, all .5s ease-in-out, webkit moz o);
+  &:hover {
+    background-color: #fff;
+    color: $blueColor;
+  }
+}

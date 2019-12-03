@@ -1,0 +1,29 @@
+.head-with-border {
+  h2 {
+    font-weight: bold;
+    color: $darkColor;
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 35px;
+      width: 40px;
+      height: 2px;
+      background-color: $darkColor;
+      @media #{$maxMobile} {
+        right: 168px;
+      }
+      @media #{$minSmall} {
+        right: 337px;
+      }
+      @media #{$minMedium} {
+        right: 450px;
+      }
+      @media #{$minLarge} {
+        right: 550px;
+      }
+    }
+  }
+}

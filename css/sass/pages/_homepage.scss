@@ -1,0 +1,336 @@
+/*** Start Home ***/
+.home {
+  background: url('../img/bg-home.jpg') center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 657px;
+  position: relative;
+  overflow: hidden;
+  .content-home.text-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 30em;
+    margin-top: -7em;
+    margin-left: -15em;
+    h1 {
+      color: #fff;
+      font-size: 60px;
+      font-weight: bold;
+    }
+    .social {
+      li {
+        display: inline-block;
+        padding: 12px 15px;
+        .icon {
+          color: #fff;
+          font-size: 20px;
+          cursor: pointer;
+          @include prefixer(transition, all .3s ease-in-out, webkit moz o);
+          &:hover {
+            color: $blueColor;
+          }
+        }
+      }
+    }
+  }
+}
+/*** End Home ***/
+
+/*** Start About ***/
+.about {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: hidden;
+  .about-img {
+    @media #{$minMedium} {
+      margin-right: 40px;
+    }
+    padding-top: 50px;
+    img {
+      @media #{$maxMobile} {
+        margin: auto;
+      }
+      @media #{$minSmall} {
+        margin: auto;
+      }
+    }
+  }
+  .about-content {
+    @media #{$maxMobile} {
+      text-align: center;
+    }
+    p {
+      padding-top: 50px;
+      font-size: 15px;
+      line-height: 1.6em;
+      color: $grayColor;
+      span {
+        color: $blueColor;
+        font-weight: bold;
+      }
+    }
+    /* Progress Bar */
+    .about-progress {
+      margin-top: 30px;
+      @media #{$maxMobile} {
+        text-align: center;
+      }
+      .progress{
+        height: 6px;
+        background: #eee;
+        border-radius: 0;
+        margin-bottom: 40px;
+        margin-top: 0;
+        box-shadow: none;
+        overflow: visible;
+        .progress-bar{
+          box-shadow: none;
+          border-radius: 5px;
+          position: relative;
+          animation: animate-positive 2s;
+          .progress-title{
+            padding: 3px 10px;
+            margin: 0;
+            min-width: 100px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #282828;
+            line-height: 22px;
+            letter-spacing: 1px;
+            text-align: center;
+            text-transform: uppercase;
+            background: #fff;
+            box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.14);
+            position: absolute;
+            top: -10px;
+            left: 0;
+          }
+          .progress-value{
+            width: 50px;
+            height: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            line-height: 25px;
+            border-radius: 4px;
+            position: absolute;
+            top: -25px;
+            right: 0;
+            color: $grayColor;
+          }
+        }
+      }
+    }
+    .info {
+      @media #{$maxMobile} {
+        text-align: center;
+        margin: auto;
+      }
+      @media #{$minSmall} {
+        text-align: center;
+        margin: auto;
+      }
+      li {
+        &:last-child{
+          margin-left: 40px;
+          @media #{$maxMobile} {
+            margin-left: 0px;
+          }
+        }
+        float: left;
+        span {
+          font-weight: bold;
+          color: $blueColor;
+        }
+      }
+    }
+    .buttons {
+      margin-top: 20px;
+      button {
+        &:last-child{
+          margin-left: 40px;
+        }
+      }
+    }
+  }
+}
+@-webkit-keyframes animate-positive{
+  0%{ width: 0; }
+}
+@keyframes animate-positive{
+  0%{ width: 0; }
+}
+/*** End About ***/
+
+/*** Start Services ***/
+.services {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: hidden;
+  background: url("../img/bg-services.jpg") center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  min-height: 525px;
+  overflow: hidden;
+  .service {
+    margin-top: 50px;
+    padding: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    cursor: default;
+    @include prefixer(box-shadow,  -2px 5px 57px -9px $shadowColor, webkit moz o);
+    @include prefixer(transition, all .5s ease-in-out, webkit moz o);
+    &:hover {
+      @include prefixer(box-shadow,  -2px 5px 57px 2px $shadowColor, webkit moz o);
+    }
+    .icon {
+      color: $grayColor;
+      @include prefixer(transition, all .5s ease-in-out, webkit moz o);
+    }
+    &:hover .icon {
+      color: $blueColor;
+    }
+    h3 {
+      color: $darkColor;
+    }
+    p {
+      color: $grayColor;
+      line-height: 1.7em;
+    }
+  }
+}
+/*** End Services ***/
+
+/*** Start Portfolio ***/
+.portfolio {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: hidden;
+  overflow: hidden;
+  .mixitup-options {
+    margin-top: 50px;
+    button {
+      @media #{$maxMobile} {
+        margin-bottom: 10px;
+        width: 140px;
+        height: 31px;
+      }
+    }
+    button.active {
+      background-color: #fff;
+      color: $blueColor;
+    }
+  }
+  .mixitup {
+    margin-top: 20px;
+    overflow: hidden;
+    .mix {
+      overflow: hidden;
+      img {
+        margin-top: 15px;
+        overflow: hidden;
+      }
+    }
+  }
+}
+/*** End Portfolio ***/
+
+/*** Start News ***/
+.news{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: hidden;
+  background-color: #eee;
+  .content-news {
+    margin-top: 50px;
+    .thumbnail {
+      border: none;
+      padding: 0;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      border-radius: 15px;
+      img {
+        width: 100% + 1;
+        -webkit-border-radius: 15px 15px 0 0px;
+        -moz-border-radius: 15px 15px 0 0px;
+        border-radius: 15px 15px 0 0px;
+      }
+      .caption {
+        margin-top: 0px;
+        h3 {
+          color: $darkColor;
+          line-height: 1.3em;
+          text-align: left;
+        }
+        p {
+          margin-top: 20px;
+          color: $grayColor;
+          text-align: left;
+          &:last-child {
+            text-align: center;
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+/*** End News ***/
+
+/*** Start Contact ***/
+.contact{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: hidden;
+  .contact-info {
+    line-height: 1.6em;
+    font-size: 16px;
+    letter-spacing: .1em;
+    margin-top: 50px;
+    li {
+      color: $grayColor;
+      margin-bottom: 10px;
+      padding: 15px 10px;
+      width: 349px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      border-radius: 15px;
+      @include prefixer(transition, all .3s ease-in-out, webkit moz o);
+      &:hover {
+        @include prefixer(box-shadow,  -2px 5px 57px -9px #ddd, webkit moz o);
+      }
+      span {
+        color: $blueColor;
+        font-weight: bold;
+      }
+    }
+  }
+  .form {
+    margin-top: 50px;
+    input {
+      @include prefixer(box-shadow,  -2px 5px 57px -9px $shadowColor, webkit moz o);
+    }
+    input[type='text'],
+    textarea {
+      width: 100%;
+      background-color: #fff;
+      margin-bottom: 20px;
+      border: 1px solid #fff;
+      padding: 15px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      border-radius: 15px;
+      @include prefixer(box-shadow,  -2px 5px 57px -9px $shadowColor, webkit moz o);
+      @include prefixer(transition, all .3s ease-in-out, webkit moz o);
+      &:hover {
+        @include prefixer(box-shadow,  -2px 5px 57px 2px $shadowColor, webkit moz o);
+      }
+    }
+    textarea {
+      height: 115px;
+    }
+  }
+}
+/*** End Contact ***/

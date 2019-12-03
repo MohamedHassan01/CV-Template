@@ -1,0 +1,18 @@
+.footer {
+  background-color: $grayColor;
+  color: #fff;
+  .text {
+    p {
+      margin-top: 15px;
+    }
+  }
+  .author {
+    p {
+      float: right;
+      margin-top: 15px;
+      span {
+        color: $blueColor;
+      }
+    }
+  }
+}
